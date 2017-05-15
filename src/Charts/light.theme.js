@@ -44,7 +44,6 @@ const smallTheme = (xAxis, yAxis, grid, colorSet) => ({
 });
 
 const mediumTheme = (xAxis, yAxis, grid = false, colorSet, fontSize = 10) => {
-  console.log('>> mediumTheme', xAxis, yAxis, grid, colorSet, fontSize);
   let gridConfig = {};
   if (!grid) {
     gridConfig.grid = null;
