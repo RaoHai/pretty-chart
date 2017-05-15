@@ -1,43 +1,12 @@
-# rc-deer-card
+# pretty-chat
 ---
 
-React DeerCard Component
-
-
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![gemnasium deps][gemnasium-image]][gemnasium-url]
-[![node version][node-image]][node-url]
-[![npm download][download-image]][download-url]
-[![Sauce Test Status](https://saucelabs.com/buildstatus/rc-deer-card)](https://saucelabs.com/u/rc-deer-card)
-
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/rc-deer-card.svg)](https://saucelabs.com/u/rc-deer-card)
-
-[npm-image]: http://img.shields.io/npm/v/rc-deer-card.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rc-deer-card
-[travis-image]: https://img.shields.io/travis/react-component/deer-card.svg?style=flat-square
-[travis-url]: https://travis-ci.org/react-component/deer-card
-[coveralls-image]: https://img.shields.io/coveralls/react-component/deer-card.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/deer-card?branch=master
-[gemnasium-image]: http://img.shields.io/gemnasium/react-component/deer-card.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/deer-card
-[node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
-[node-url]: http://nodejs.org/download/
-[download-image]: https://img.shields.io/npm/dm/rc-deer-card.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rc-deer-card
-
-
-## Browser Support
-
-|![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)|
-| --- | --- | --- | --- | --- |
-| IE 8+ ✔ | Chrome 31.0+ ✔ | Firefox 31.0+ ✔ | Opera 30.0+ ✔ | Safari 7.0+ ✔ |
+A well designed chart base on G2;
 
 ## Screenshots
 
-<img src="" width="288"/>
-
+<img src="https://zos.alipayobjects.com/rmsportal/nnoenIjtYvNfyVFEbYCc.png" />
+<img src="https://zos.alipayobjects.com/rmsportal/UsxPWkOfjQmxcfnFamTm.png" />
 
 ## Development
 
@@ -62,13 +31,13 @@ online example: http://react-component.github.io/deer-card/
 ## install
 
 
-[![rc-deer-card](https://nodei.co/npm/rc-deer-card.png)](https://npmjs.org/package/rc-deer-card)
+[![pretty-chart](https://nodei.co/npm/pretty-chart.png)](https://npmjs.org/package/pretty-chart)
 
 
 ## Usage
 
 ```js
-var DeerCard = require('rc-deer-card');
+var DeerCard = require('pretty-chart');
 var React = require('react');
 React.render(<DeerCard />, container);
 ```
@@ -114,4 +83,4 @@ open coverage/ dir
 
 ## License
 
-rc-deer-card is released under the MIT license.
+pretty-chart is released under the MIT license.

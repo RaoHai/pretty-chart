@@ -1,5 +1,5 @@
 {
-  "name": "rc-deer-card",
+  "name": "pretty-chart",
   "version": "0.0.1",
   "description": "deer-card ui component for react",
   "keywords": [
@@ -8,14 +8,14 @@
     "react-deer-card",
     "deer-card"
   ],
-  "homepage": "https://github.com/react-component/deer-card",
+  "homepage": "https://github.com/RaoHai/pretty-chart",
   "author": "surgesoft@gmail.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-component/deer-card.git"
+    "url": "https://github.com/RaoHai/pretty-chart.git"
   },
   "bugs": {
-    "url": "https://github.com/react-component/deer-card/issues"
+    "url": "https://github.com/RaoHai/pretty-chart/issues"
   },
   "files": [
     "lib",

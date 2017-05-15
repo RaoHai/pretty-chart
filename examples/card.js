@@ -1,9 +1,9 @@
-import 'rc-deer-card/assets/index.less';
-import 'rc-deer-card/assets/default.less';
+import 'pretty-chart/assets/index.less';
+import 'pretty-chart/assets/default.less';
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import DeerCard, { Charts, Meta, Title, Footer, Percent } from 'rc-deer-card';
+import DeerCard, { Charts, Meta, Title, Footer, Percent } from 'pretty-chart';
 
 
 const defaultColorSet = {

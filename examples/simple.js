@@ -1,7 +1,7 @@
 // use jsx to render html, do not modify simple.html
 
-import 'rc-deer-card/assets/index.less';
-import DeerCard from 'rc-deer-card';
+import 'pretty-chart/assets/index.less';
+import DeerCard from 'pretty-chart';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

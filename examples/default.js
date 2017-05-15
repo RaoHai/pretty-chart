@@ -1,9 +1,9 @@
 // use jsx to render html, do not modify simple.html
 
-import 'rc-deer-card/assets/index.less';
-import 'rc-deer-card/assets/default.less';
+import 'pretty-chart/assets/index.less';
+import 'pretty-chart/assets/default.less';
 
-import DeerCard, { Charts, Meta } from 'rc-deer-card';
+import DeerCard, { Charts, Meta } from 'pretty-chart';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Checkbox from 'rc-checkbox';
