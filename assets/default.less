@@ -1,0 +1,227 @@
+
+#__react-content {
+  background: #FBFBFB;
+}
+
+.deer-card {
+  &-small, &-very-small, &-mini, &-quarter, &-third, &-half, &-large, &-full {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    border: 0;
+    border-radius: 0;
+
+    .hover-active-key {
+      display: none;
+    }
+    .deer-card-title {
+      color: #9B9B9B;
+      font-size: 12px;
+      text-align: left;
+      padding: 6px 9px;
+      border: none;
+    }
+
+    .deer-card-content {
+      padding: 0;
+    }
+  }
+
+
+  &-very-small {
+    .dynamic-title {
+      top: 0px;
+      left: 0px;
+      transition: top .3s ease-in-out;
+      &.show {
+        top: 0;
+      }
+      &.hide {
+        top: 30px;
+      }
+    }
+    .interval-header {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      overflow: hidden;
+    }
+    .deer-card-content { padding-top: 15px; } 
+    .deer-card-title {
+      font-size: 12px;
+      color: #9B9B9B;
+      padding: 1px 5px;
+      display: none;
+    }
+    .hover-active-key {
+      display: inline-block;
+      left: 5px;
+      right: auto;
+      top: 2px;
+      color: #4990E2;
+      font-size: 12px;
+    }
+
+    .hover-active-value {
+      top: 14px;
+      left: 9px;
+      color: #9B9B9B;
+      font-size: 12px;
+    }
+
+    .hover-value {
+      display: none;
+    }
+  }
+
+  &-mini {
+    .deer-card-title { display: none; }
+    .deer-card-content { padding-top: 35px; }
+    .dynamic-title {
+      top: 0px;
+      left: 0px;
+      transition: top .3s ease-in-out;
+      &.show {
+        top: 0;
+      }
+      &.hide {
+        top: 30px;
+      }
+    }
+    .interval-header {
+      position: absolute;
+      top: -35px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      overflow: hidden;
+    }
+    .hover-active-key {
+      display: inline-block;
+      left: 5px;
+      right: auto;
+      top: 0;
+      color: #4990E2;
+      font-size: 12px;
+    }
+
+    .hover-active-value {
+      top: 12px;
+      left: 9px;
+      right: auto;
+      color: #9B9B9B;
+      font-size: 12px;
+    }
+
+    .hover-value {
+      display: none;
+    }
+  }
+
+  &-quarter {
+    .hover-active-value {
+      display: none;
+    }
+  }
+
+  &-third {
+    min-height: 300px;
+    height: 100%;
+    border-radius: 4px;
+    .deer-card-title {
+      font-size: 12px;
+      color: #797979;
+      padding: 14px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    }
+    .deer-card-content {
+      padding-bottom: 20px;
+    }
+    .deer-card-footer {
+      background: white;
+      padding: 0;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      border-radius: 0 0 4px 4px;
+      .meta {
+        padding: 30px 0px;
+        &-vertical {
+          padding-top: 12px;
+          .percent-wrapper {
+            margin-top: 21px !important;
+          }
+        }
+        &-closely {
+          padding: 0;
+          .meta-title {
+            margin-bottom: 0;
+          }
+        }
+
+        .meta-item:not(:nth-of-type(1))::after {
+          border-color: rgba(0, 0, 0, .1);
+        }
+        .meta-item {
+          padding-left: 43px;
+          .meta-title {
+            color: #9B9B9B !important; 
+            margin-bottom: 8px;
+
+          }
+          .meta-content {
+            font-weight: 300;
+            color: #417505 !important; 
+            .percent-wrapper {
+              margin-top: 13px;
+            }
+            .percent-content {
+              background: #7ED321;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &-half, &-large, &-full {
+    display: flex;
+    flex-direction: row;
+
+    .deer-card-title {
+      flex: 0 0 auto;
+      display: flex;
+      .meta {
+        flex: 1 1 auto;
+        line-height: 1.2;
+        flex-direction: column;
+        align-content: flex-start;
+        padding-left: 38px;
+        .meta-item {
+          align-self: flex-start;
+          text-align: left;
+          flex: 1 1 auto;
+          &:first-child {
+            padding-top: 12px;
+            .meta-title { color: #9B9B9B; }
+          }
+
+          .meta-content .grow {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+
+        .meta-title {
+          display: block;
+          color: #9B9B9B;
+        }
+      }
+    }
+
+    .deer-card-content {
+      flex: 1;
+      padding-top: 68px;
+    }
+  }
+}
+
