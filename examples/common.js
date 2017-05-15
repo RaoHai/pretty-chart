@@ -64112,7 +64112,6 @@
 	  var colorSet = arguments[3];
 	  var fontSize = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 10;
 	
-	  console.log('>> mediumTheme', xAxis, yAxis, grid, colorSet, fontSize);
 	  var gridConfig = {};
 	  if (!grid) {
 	    gridConfig.grid = null;
