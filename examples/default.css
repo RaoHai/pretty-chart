@@ -1,0 +1,274 @@
+#__react-content {
+  background: #FBFBFB;
+}
+.deer-card-small,
+.deer-card-very-small,
+.deer-card-mini,
+.deer-card-quarter,
+.deer-card-third,
+.deer-card-half,
+.deer-card-large,
+.deer-card-full {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 0;
+}
+.deer-card-small .hover-active-key,
+.deer-card-very-small .hover-active-key,
+.deer-card-mini .hover-active-key,
+.deer-card-quarter .hover-active-key,
+.deer-card-third .hover-active-key,
+.deer-card-half .hover-active-key,
+.deer-card-large .hover-active-key,
+.deer-card-full .hover-active-key {
+  display: none;
+}
+.deer-card-small .deer-card-title,
+.deer-card-very-small .deer-card-title,
+.deer-card-mini .deer-card-title,
+.deer-card-quarter .deer-card-title,
+.deer-card-third .deer-card-title,
+.deer-card-half .deer-card-title,
+.deer-card-large .deer-card-title,
+.deer-card-full .deer-card-title {
+  color: #9B9B9B;
+  font-size: 12px;
+  text-align: left;
+  padding: 6px 9px;
+  border: none;
+}
+.deer-card-small .deer-card-content,
+.deer-card-very-small .deer-card-content,
+.deer-card-mini .deer-card-content,
+.deer-card-quarter .deer-card-content,
+.deer-card-third .deer-card-content,
+.deer-card-half .deer-card-content,
+.deer-card-large .deer-card-content,
+.deer-card-full .deer-card-content {
+  padding: 0;
+}
+.deer-card-very-small .dynamic-title {
+  top: 0px;
+  left: 0px;
+  transition: top 0.3s ease-in-out;
+}
+.deer-card-very-small .dynamic-title.show {
+  top: 0;
+}
+.deer-card-very-small .dynamic-title.hide {
+  top: 30px;
+}
+.deer-card-very-small .interval-header {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.deer-card-very-small .deer-card-content {
+  padding-top: 15px;
+}
+.deer-card-very-small .deer-card-title {
+  font-size: 12px;
+  color: #9B9B9B;
+  padding: 1px 5px;
+  display: none;
+}
+.deer-card-very-small .hover-active-key {
+  display: inline-block;
+  left: 5px;
+  right: auto;
+  top: 2px;
+  color: #4990E2;
+  font-size: 12px;
+}
+.deer-card-very-small .hover-active-value {
+  top: 14px;
+  left: 9px;
+  color: #9B9B9B;
+  font-size: 12px;
+}
+.deer-card-very-small .hover-value {
+  display: none;
+}
+.deer-card-mini .deer-card-title {
+  display: none;
+}
+.deer-card-mini .deer-card-content {
+  padding-top: 35px;
+}
+.deer-card-mini .dynamic-title {
+  top: 0px;
+  left: 0px;
+  transition: top 0.3s ease-in-out;
+}
+.deer-card-mini .dynamic-title.show {
+  top: 0;
+}
+.deer-card-mini .dynamic-title.hide {
+  top: 30px;
+}
+.deer-card-mini .interval-header {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.deer-card-mini .hover-active-key {
+  display: inline-block;
+  left: 5px;
+  right: auto;
+  top: 0;
+  color: #4990E2;
+  font-size: 12px;
+}
+.deer-card-mini .hover-active-value {
+  top: 12px;
+  left: 9px;
+  right: auto;
+  color: #9B9B9B;
+  font-size: 12px;
+}
+.deer-card-mini .hover-value {
+  display: none;
+}
+.deer-card-quarter .hover-active-value {
+  display: none;
+}
+.deer-card-third {
+  min-height: 300px;
+  height: 100%;
+  border-radius: 4px;
+}
+.deer-card-third .deer-card-title {
+  font-size: 12px;
+  color: #797979;
+  padding: 14px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.deer-card-third .deer-card-content {
+  padding-bottom: 20px;
+}
+.deer-card-third .deer-card-footer {
+  background: white;
+  padding: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+}
+.deer-card-third .deer-card-footer .meta {
+  padding: 30px 0px;
+}
+.deer-card-third .deer-card-footer .meta-vertical {
+  padding-top: 12px;
+}
+.deer-card-third .deer-card-footer .meta-vertical .percent-wrapper {
+  margin-top: 21px !important;
+}
+.deer-card-third .deer-card-footer .meta-closely {
+  padding: 0;
+}
+.deer-card-third .deer-card-footer .meta-closely .meta-title {
+  margin-bottom: 0;
+}
+.deer-card-third .deer-card-footer .meta .meta-item:not(:nth-of-type(1))::after {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.deer-card-third .deer-card-footer .meta .meta-item {
+  padding-left: 43px;
+}
+.deer-card-third .deer-card-footer .meta .meta-item .meta-title {
+  color: #9B9B9B !important;
+  margin-bottom: 8px;
+}
+.deer-card-third .deer-card-footer .meta .meta-item .meta-content {
+  font-weight: 300;
+  color: #417505 !important;
+}
+.deer-card-third .deer-card-footer .meta .meta-item .meta-content .percent-wrapper {
+  margin-top: 13px;
+}
+.deer-card-third .deer-card-footer .meta .meta-item .meta-content .percent-content {
+  background: #7ED321;
+}
+.deer-card-half,
+.deer-card-large,
+.deer-card-full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.deer-card-half .deer-card-title,
+.deer-card-large .deer-card-title,
+.deer-card-full .deer-card-title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.deer-card-half .deer-card-title .meta,
+.deer-card-large .deer-card-title .meta,
+.deer-card-full .deer-card-title .meta {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 1.2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding-left: 38px;
+}
+.deer-card-half .deer-card-title .meta .meta-item,
+.deer-card-large .deer-card-title .meta .meta-item,
+.deer-card-full .deer-card-title .meta .meta-item {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.deer-card-half .deer-card-title .meta .meta-item:first-child,
+.deer-card-large .deer-card-title .meta .meta-item:first-child,
+.deer-card-full .deer-card-title .meta .meta-item:first-child {
+  padding-top: 12px;
+}
+.deer-card-half .deer-card-title .meta .meta-item:first-child .meta-title,
+.deer-card-large .deer-card-title .meta .meta-item:first-child .meta-title,
+.deer-card-full .deer-card-title .meta .meta-item:first-child .meta-title {
+  color: #9B9B9B;
+}
+.deer-card-half .deer-card-title .meta .meta-item .meta-content .grow,
+.deer-card-large .deer-card-title .meta .meta-item .meta-content .grow,
+.deer-card-full .deer-card-title .meta .meta-item .meta-content .grow {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.deer-card-half .deer-card-title .meta .meta-title,
+.deer-card-large .deer-card-title .meta .meta-title,
+.deer-card-full .deer-card-title .meta .meta-title {
+  display: block;
+  color: #9B9B9B;
+}
+.deer-card-half .deer-card-content,
+.deer-card-large .deer-card-content,
+.deer-card-full .deer-card-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 68px;
+}
+
+/*# sourceMappingURL=default.css.map*/
