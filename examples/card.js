@@ -148,7 +148,7 @@ webpackJsonp([0],[
 	var App = function App() {
 	  return _react2.default.createElement(
 	    'div',
-	    { style: { width: 1208, margin: '0 auto' } },
+	    { className: 'flex-container' },
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'row' },

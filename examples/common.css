@@ -363,5 +363,44 @@ h3.deer-card-title {
   height: 8px;
   top: -1px;
 }
+@media (min-width: 960px) {
+  .flex-container {
+    width: 1208px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 960px) {
+  html,
+  body {
+    width: 100%;
+  }
+  .flex-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .flex-container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+  .flex-container .deer-card-full,
+  .flex-container .deer-card-large,
+  .flex-container .deer-card-half,
+  .flex-container .deer-card-third,
+  .flex-container .deer-card-quarter {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .flex-container .deer-card-small,
+  .flex-container .deer-card-very-small,
+  .flex-container .deer-card-mini {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
 
 /*# sourceMappingURL=common.css.map*/
