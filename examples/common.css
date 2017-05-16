@@ -404,6 +404,8 @@ h3.deer-card-title {
 }
 .container {
   width: 100%;
+  overflow: hidden;
+  margin: 0 -1px;
 }
 
 /*# sourceMappingURL=common.css.map*/
