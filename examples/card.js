@@ -271,7 +271,7 @@ webpackJsonp([0],[
 	          _react2.default.createElement(
 	            _prettyChart.Meta.Item,
 	            null,
-	            _react2.default.createElement(_prettyChart.Percent, { title: '\u529D\u4F60\u5229\u6DA6\u7387', value: '55.9%', type: 'large' })
+	            _react2.default.createElement(_prettyChart.Percent, { title: '\u5168\u5E74\u5229\u6DA6\u7387', value: '55.9%', type: 'large' })
 	          )
 	        )
 	      ),
