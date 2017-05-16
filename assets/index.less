@@ -168,8 +168,9 @@ html, body {
   
   &-vertical {
     flex-direction: column;
+    // display: block;
     .meta-item {
-      flex: 0 0 100%;
+      flex: none;
       align-self: center;
       border-left: 0 !important;
       padding-left: 0 !important;
@@ -183,12 +184,14 @@ html, body {
     flex: 1;
     align-self: flex-end;
     text-align: center;
+    display: inline-block;
 
     &-large {
       margin-top: -6px;
       text-align: left;
       .meta-title { color: #9B9B9B; }
       .meta-content {
+        display: inline-block;
         font-size: 28px; 
         color: #4A4A4A;
         font-weight: 300;
