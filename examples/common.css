@@ -391,8 +391,8 @@ h3.deer-card-title {
   .flex-container .deer-card-third,
   .flex-container .deer-card-quarter {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+        -ms-flex: 0;
+            flex: 0;
   }
   .flex-container .deer-card-small,
   .flex-container .deer-card-very-small,
