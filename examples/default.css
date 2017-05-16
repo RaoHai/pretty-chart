@@ -177,6 +177,9 @@
 .deer-card-third .deer-card-footer .meta-closely .meta-item {
   text-align: center !important;
 }
+.deer-card-third .deer-card-footer .meta-closely .meta-content {
+  line-height: 42px;
+}
 .deer-card-third .deer-card-footer .meta .meta-item:not(:nth-of-type(1))::after {
   border-color: rgba(0, 0, 0, 0.1);
 }

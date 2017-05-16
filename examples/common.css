@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  font-family: 'Lantinghei SC', 'Open Sans', 'Arial', 'Hiragino Sans GB', 'Microsoft YaHei', '\\5FAE\8F6F\96C5\9ED1', 'STHeiti', 'WenQuanYi Micro Hei', 'SimSun', 'sans-serif';
+  margin-bottom: 5px;
+}
 .deer-card {
   position: relative;
   border-radius: 4px;
