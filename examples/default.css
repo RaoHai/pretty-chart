@@ -174,11 +174,15 @@
 .deer-card-third .deer-card-footer .meta-closely .meta-title {
   margin-bottom: 0;
 }
+.deer-card-third .deer-card-footer .meta-closely .meta-item {
+  text-align: center !important;
+}
 .deer-card-third .deer-card-footer .meta .meta-item:not(:nth-of-type(1))::after {
   border-color: rgba(0, 0, 0, 0.1);
 }
 .deer-card-third .deer-card-footer .meta .meta-item {
   padding-left: 43px;
+  text-align: left;
 }
 .deer-card-third .deer-card-footer .meta .meta-item .meta-title {
   color: #9B9B9B !important;

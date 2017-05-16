@@ -138,8 +138,13 @@ webpackJsonp([0],[
 	      ),
 	      _react2.default.createElement(
 	        _prettyChart.Meta.Item,
-	        { title: 'Average' },
-	        '103 / DAY'
+	        { title: 'Maximun' },
+	        '+ 103'
+	      ),
+	      _react2.default.createElement(
+	        _prettyChart.Meta.Item,
+	        { title: 'Minimum' },
+	        '- 30'
 	      )
 	    )
 	  );

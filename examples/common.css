@@ -179,9 +179,9 @@ h3.deer-card-title {
   padding-left: 0 !important;
 }
 .meta-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
@@ -282,7 +282,7 @@ h3.deer-card-title {
 .meta .meta-item {
   text-align: left;
   position: relative;
-  padding-left: 50px;
+  text-align: center;
 }
 .meta .meta-item:not(:nth-of-type(1))::after {
   content: ' ';
