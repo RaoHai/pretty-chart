@@ -175,8 +175,8 @@ h3.deer-card-title {
 }
 .meta-vertical .meta-item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+      -ms-flex: none;
+          flex: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -190,6 +190,7 @@ h3.deer-card-title {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
+  display: inline-block;
 }
 .meta-item-large {
   margin-top: -6px;
@@ -199,6 +200,7 @@ h3.deer-card-title {
   color: #9B9B9B;
 }
 .meta-item-large .meta-content {
+  display: inline-block;
   font-size: 28px;
   color: #4A4A4A;
   font-weight: 300;
