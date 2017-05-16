@@ -142,10 +142,10 @@ export default class Interval extends Component {
     canvas.addEventListener('touchstart', ev => {
       const { targetTouches } = ev;
       var rect = ev.target.getBoundingClientRect();
-      var x = targetTouches[0].clientX;
-      var y = targetTouches[0].clientY;
+      var x = targetTouches[0].clientX - rect.left;
+      var y = targetTouches[0].clientY - rect.top;
       const point = {x, y};
-      console.log(' touchstart', point);
+      // console.log(' touchstart', rect, point);
       chart.showTooltip(point);
     });
 
