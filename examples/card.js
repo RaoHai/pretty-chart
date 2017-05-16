@@ -99,7 +99,7 @@ const Card2 = ({ children, type = 'dark' }) =>
     </Meta>
  </DeerCard>);
 
-const App = () => <div style={{ width: 1208, margin: '0 auto'}}>
+const App = () => <div className="flex-container">
   <div className="row">
     <Card>
       <Meta>

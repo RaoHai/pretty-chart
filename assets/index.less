@@ -367,3 +367,33 @@
     top: -1px;
   }
 }
+
+@media (min-width: 960px) {
+  .flex-container {
+    width: 1208px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 960px) {
+  html, body {
+    width: 100%;
+  }
+  .flex-container {
+    width: 100%;
+    overflow-x: hidden;
+    .row {
+      flex-direction: column;
+      margin-left: 0;
+    }
+    .deer-card {
+      &-full, &-large, &-half, &-third, &-quarter {
+        flex: 0 1 100%;
+      }
+
+      &-small, &-very-small, &-mini {
+        flex: 0 1 50%;
+      }
+    }
+  }
+}
