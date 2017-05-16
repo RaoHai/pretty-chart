@@ -63956,10 +63956,10 @@
 	        var targetTouches = ev.targetTouches;
 	
 	        var rect = ev.target.getBoundingClientRect();
-	        var x = targetTouches[0].clientX;
-	        var y = targetTouches[0].clientY;
+	        var x = targetTouches[0].clientX - rect.left;
+	        var y = targetTouches[0].clientY - rect.top;
 	        var point = { x: x, y: y };
-	        console.log(' touchstart', point);
+	        // console.log(' touchstart', rect, point);
 	        chart.showTooltip(point);
 	      });
 	    };
