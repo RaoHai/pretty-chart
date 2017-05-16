@@ -136,7 +136,18 @@ export default class Interval extends Component {
     
     const frontCanvas = chart.get('frontCanvas');
     const activeGroup = frontCanvas.addGroup();
-  
+    
+    // console.log('>> frontCanvas', frontCanvas);
+    const canvas = frontCanvas.__cfg.canvasDOM;
+    canvas.addEventListener('touchstart', ev => {
+      const { targetTouches } = ev;
+      var rect = ev.target.getBoundingClientRect();
+      var x = targetTouches[0].clientX;
+      var y = targetTouches[0].clientY;
+      const point = {x, y};
+      console.log(' touchstart', point);
+      chart.showTooltip(point);
+    });
 
   }
   renderHoverValues = () => {
