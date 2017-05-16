@@ -95,7 +95,8 @@ const Card2 = ({ children, type = 'dark' }) =>
     <Charts.Interval data={data} xAxis='x' yAxis='y' grid="rgba(0, 0, 0, .1)" />
     <Meta>
       <Meta.Item title="Average">24.6%</Meta.Item>
-      <Meta.Item title="Average">103 / DAY</Meta.Item>
+      <Meta.Item title="Maximun">+ 103</Meta.Item>
+      <Meta.Item title="Minimum">- 30</Meta.Item>
     </Meta>
  </DeerCard>);
 
