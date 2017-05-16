@@ -178,7 +178,7 @@
   text-align: center !important;
 }
 .deer-card-third .deer-card-footer .meta-closely .meta-content {
-  line-height: 42px;
+  line-height: 44px;
 }
 .deer-card-third .deer-card-footer .meta .meta-item:not(:nth-of-type(1))::after {
   border-color: rgba(0, 0, 0, 0.1);
@@ -194,6 +194,7 @@
 .deer-card-third .deer-card-footer .meta .meta-item .meta-content {
   font-weight: 300;
   color: #417505 !important;
+  vertical-align: bottom;
 }
 .deer-card-third .deer-card-footer .meta .meta-item .meta-content .percent-wrapper {
   margin-top: 13px;
