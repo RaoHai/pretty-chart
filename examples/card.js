@@ -134,7 +134,7 @@ const App = () => <div className="flex-container">
       <Meta type="vertical">
         <Meta.Item><Percent title="最近利润率" value="24.6%" type="large"/></Meta.Item>
         <Meta.Item><Percent title="周期利润率" value="15.6%" type="large"/></Meta.Item>
-        <Meta.Item><Percent title="劝你利润率" value="55.9%" type="large"/></Meta.Item>
+        <Meta.Item><Percent title="全年利润率" value="55.9%" type="large"/></Meta.Item>
       </Meta>
     </Card2>
     <Card2 type="normal">
