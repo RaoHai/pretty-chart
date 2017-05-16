@@ -252,14 +252,38 @@ h3.deer-card-title {
   -webkit-transition: top 200ms,left 200ms;
   /* Safari 和 Chrome */
   -o-transition: top 200ms,left 200ms;
+  color: #777;
 }
 .ac-tooltip .ac-title {
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 2px;
 }
-.ac-tooltip .ac-list span {
+.ac-tooltip p {
+  margin: 0;
+}
+.ac-tooltip .ac-list {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ac-tooltip .ac-list ul,
+.ac-tooltip .ac-list li {
+  list-style: none;
+  margin: 0;
+}
+.ac-tooltip .ac-list ul {
+  padding-left: 0;
+}
+.ac-tooltip .ac-list .dot {
+  width: 6px;
+  height: 6px;
   display: inline-block;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+.ac-tooltip .ac-list span {
+  display: none;
   color: #666;
+  background: #666;
 }
 .ac-tooltip .ac-list .ac-item-point {
   width: 6px;
@@ -268,7 +292,6 @@ h3.deer-card-title {
 }
 .ac-tooltip .ac-list .ac-item-text {
   margin-left: 5px;
-  padding-left: 6px;
 }
 .title {
   box-shadow: 0.5px 0.5px 0 1px #cacaca, 0 2px 4px 0 rgba(0, 0, 0, 0.14);

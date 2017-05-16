@@ -63788,6 +63788,22 @@
 	exports.default = {
 	  Interval: _Interval2.default
 	};
+	
+	
+	_g2.default.Global.tooltip = {
+	  custom: true,
+	  html: '<div class="ac-tooltip" style="position:absolute; visibility: hidden;">\n          <p class="ac-title"></p>\n          <table class="ac-list custom-table"></table>\n        </div>',
+	  itemTpl: '<tr>\n              <td class="ac-item-text">\n                <p>{name}</p>\n                <p>{value}</p>\n              </td>\n            </tr>',
+	  offset: 15,
+	  crossLine: {
+	    stroke: '#9d9d9d'
+	  },
+	  wordSpaceing: 6,
+	  markerCfg: {
+	    symbol: 'circle',
+	    radius: 4
+	  }
+	};
 	module.exports = exports['default'];
 
 /***/ }),
@@ -63883,6 +63899,7 @@
 	      chart.source(data, (_chart$source = {}, _defineProperty(_chart$source, '' + xAxis, {
 	        range: config.range
 	      }), _defineProperty(_chart$source, '' + yAxis, {
+	        alias: '收支',
 	        type: 'linear',
 	        tickInterval: 10
 	      }), _defineProperty(_chart$source, 'type', {
@@ -63961,6 +63978,12 @@
 	        var point = { x: x, y: y };
 	        // console.log(' touchstart', rect, point);
 	        chart.showTooltip(point);
+	      });
+	
+	      chart.on('tooltipchange', function (ev) {
+	        var item = ev.items[0];
+	        var values = ev.items["0"].point._origin.y;
+	        item.value = '<ul>\n        <li><span class="dot" style="background: ' + colorSet.primary + ';" ></span>\u6700\u5927\u503C\uFF1A' + values[1] + '</li>\n        <li><span class="dot" style="background: ' + colorSet.secondary + ';"></span>\u6700\u5C0F\u503C\uFF1A' + values[0] + '</li>\n      </ul>';
 	      });
 	    };
 	
