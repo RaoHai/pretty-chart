@@ -23,6 +23,13 @@
   ],
   "licenses": "MIT",
   "main": "./lib/index",
+  "entry": {
+    "pretty-chart": [
+      "./assets/index.less",
+      "./assets/default.less",
+      "./src/index.js"
+    ]
+  },
   "config": {
     "port": 8001
   },
@@ -42,7 +49,7 @@
     "expect.js": "0.3.x",
     "pre-commit": "1.x",
     "rc-checkbox": "^2.0.0",
-    "rc-tools": "5.x",
+    "rc-tools": "^6.1.8",
     "react": "0.14.x",
     "react-addons-test-utils": "0.14.x",
     "react-dom": "0.14.x"

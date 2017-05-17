@@ -6,6 +6,8 @@ export default {
   Interval
 };
 
+export { Interval };
+
 
 G2.Global.tooltip = {
   custom: true,

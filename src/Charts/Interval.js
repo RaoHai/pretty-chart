@@ -154,8 +154,8 @@ export default class Interval extends Component {
       var item = ev.items[0];
       const values = ev.items["0"].point._origin.y;
       item.value = `<ul>
-        <li><span class="dot" style="background: ${colorSet.primary};" ></span>最大值：${values[1]}</li>
-        <li><span class="dot" style="background: ${colorSet.secondary};"></span>最小值：${values[0]}</li>
+        <li><span class="dot" style="background: ${colorSet.secondary};" ></span>最大值：${values[1]}</li>
+        <li><span class="dot" style="background: ${colorSet.primary};"></span>最小值：${values[0]}</li>
       </ul>`
     });
 

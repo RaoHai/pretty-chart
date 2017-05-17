@@ -3,8 +3,8 @@ import 'pretty-chart/assets/default.less';
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import DeerCard, { Charts, Meta, Title, Footer, Percent } from 'pretty-chart';
-
+import DeerCard from 'pretty-chart';
+const { Charts, Meta, Title, Footer, Percent } = DeerCard;
 
 const App = () => <div style={{ width: 500, margin: '0 auto'}}>
   <Title> Type something </Title>

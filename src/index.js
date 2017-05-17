@@ -13,3 +13,4 @@ DeerCard.Percent = Percent;
 DeerCard.Footer = Footer;
 
 export default DeerCard;
+export { Charts, Meta, Title, Percent, Footer };

@@ -7,7 +7,7 @@ export function Item({ title, children, center, type='normal' }, { colorSet = de
     style={{ borderColor: colorSet.guide }}
   >
     {title ? <span className="meta-title" style={{ color: colorSet.meta.title}} >{title}</span> : null}
-    <span className="meta-content" style={{ color: colorSet.meta.value}}>{children}</span>
+    {children ? <span className="meta-content" style={{ color: colorSet.meta.value}}>{children}</span> : null}
   </span>
 }
 

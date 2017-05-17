@@ -3,12 +3,13 @@
 import 'pretty-chart/assets/index.less';
 import 'pretty-chart/assets/default.less';
 
-import DeerCard, { Charts, Meta } from 'pretty-chart';
+import DeerCard from 'pretty-chart';
+
+const { Charts, Meta } = DeerCard;
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Checkbox from 'rc-checkbox';
 
-console.log('>> meta', Meta);
 const rawData = [
   { x: '04-01 周一', y: [-10, 21] }, //{ x: 1, y: -10 },
   { x: '04-02 周二', y: [-11, 20] }, //{ x: 2, y: -11 },
@@ -115,14 +116,14 @@ const App = React.createClass({
           <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
         </DeerCard>
 
-        <DeerCard size="third" title={<Meta type="vertical">
+        <DeerCard size="third" title={<Meta>
             <Meta.Item title="Average">24.6%</Meta.Item>
             <Meta.Item title="Average">103 / DAY</Meta.Item>
           </Meta>} colorSet={colorSet}>
           <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
         </DeerCard>
 
-        <DeerCard size="third" title={<Meta type="vertical">
+        <DeerCard size="third" title={<Meta>
             <Meta.Item type="large" title="Type something">3200 <span className="grow"> 17.18 </span></Meta.Item>
             <Meta.Item><a href="#"> more something</a></Meta.Item>
           </Meta>} colorSet={colorSet}>
@@ -131,7 +132,7 @@ const App = React.createClass({
       </div>
 
       <div className="row">
-        <DeerCard size="half" title={<Meta>
+        <DeerCard size="half" title={<Meta type="vertical">
             <Meta.Item title="最近一周价格" />
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
@@ -139,7 +140,7 @@ const App = React.createClass({
           </Meta>} colorSet={colorSet}>
           <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
         </DeerCard>
-        <DeerCard size="half" title={<Meta>
+        <DeerCard size="half" title={<Meta type="vertical">
             <Meta.Item title="最近一周价格" />
             <Meta.Item title="Type">24.6% <span className="grow"> 17.18 </span></Meta.Item>
             <Meta.Item title="Type">24.6% <span className="grow"> 17.18 </span></Meta.Item>
@@ -150,7 +151,7 @@ const App = React.createClass({
       </div>
 
       <div className="row">
-        <DeerCard size="large" title={<Meta>
+        <DeerCard size="large" title={<Meta type="vertical">
             <Meta.Item title="最近一周价格" />
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
@@ -161,7 +162,7 @@ const App = React.createClass({
       </div>
 
       <div className="row">
-        <DeerCard size="full" title={<Meta>
+        <DeerCard size="full" title={<Meta type="vertical">
             <Meta.Item title="最近一周价格" />
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
