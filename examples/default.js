@@ -178,7 +178,7 @@ const App = React.createClass({
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
           </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={rawData} xAxis='x' yAxis='y' grid="rgba(0, 0, 0, .1)"  />
+          <Charts.Interval data={rawData} xAxis='x' yAxis='y' grid={this.getGrid()} />
         </DeerCard>
       </div>
     </div>
