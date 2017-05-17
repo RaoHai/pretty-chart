@@ -42,6 +42,7 @@ class CardBase extends Component {
       <div className={cls('', {
         dark: theme === 'dark',
         [`${size}`]: true,
+        hasTitle: !!title,
       })}
         style={{ background: colorSet.background }}
       >

@@ -47,7 +47,8 @@ const defaultColorSet = {
     title: '#9B9B9B',
     value: '#417505',
   },
-  guide: '#B3B3B3',
+  guide: 'rgba(0, 0, 0, .1)',
+  grid: 'rgba(255, 255, 255, .5)',
   xAxis: '#B3B3B3',
   yAxis: '#B3B3B3',
 }
@@ -68,7 +69,8 @@ const DarkColorSet = {
     title: 'rgba(255, 255, 255, .6)',
     value: '#FFFFFF',
   },
-  guide: '#FFFFFF',
+  guide: 'rgba(255, 255, 255, .5)',
+  grid: 'rgba(0, 0, 0, .1)',
   xAxis: '#FFFFFF',
   yAxis: '#FFFFFF',
 }
@@ -78,6 +80,13 @@ const App = React.createClass({
     return {
       dark: true,
     };
+  },
+  getGrid() {
+    const { dark } = this.state;
+    if (dark) {
+      return 'rgba(255, 255, 255, .5)';
+    }
+    return 'rgba(0, 0, 0, .1)';
   },
   render() {
     const { dark } = this.state;
@@ -109,24 +118,26 @@ const App = React.createClass({
       </div>
       
       <div className="row">
-        <DeerCard size="third" title={<Meta>
+        <DeerCard size="third" colorSet={colorSet}>
+          <Meta>
             <Meta.Item title="Average">24.6%</Meta.Item>
-          </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          </Meta>
+          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={this.getGrid()}  />
         </DeerCard>
 
-        <DeerCard size="third" title={<Meta>
+        <DeerCard size="third" colorSet={colorSet}>
+          <Meta>
             <Meta.Item title="Average">24.6%</Meta.Item>
             <Meta.Item title="Average">103 / DAY</Meta.Item>
-          </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          </Meta>
+          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={this.getGrid()}   />
         </DeerCard>
 
-        <DeerCard size="third" title={<Meta>
+        <DeerCard size="third" colorSet={colorSet}>
+          <Meta>
             <Meta.Item type="large" title="Type something">3200 <span className="grow"> 17.18 </span></Meta.Item>
-            <Meta.Item><a href="#"> more something</a></Meta.Item>
-          </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          </Meta>
+          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={this.getGrid()}  />
         </DeerCard>
       </div>
 
@@ -137,7 +148,7 @@ const App = React.createClass({
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
           </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={this.getGrid()} />
         </DeerCard>
         <DeerCard size="half" title={<Meta type="vertical">
             <Meta.Item title="最近一周价格" />
@@ -145,7 +156,7 @@ const App = React.createClass({
             <Meta.Item title="Type">24.6% <span className="grow"> 17.18 </span></Meta.Item>
             <Meta.Item title="Type">24.6% <span className="grow"> 17.18 </span></Meta.Item>
           </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          <Charts.Interval data={data} xAxis='x' yAxis='y' grid={this.getGrid()} />
         </DeerCard>
       </div>
 
@@ -156,7 +167,7 @@ const App = React.createClass({
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
           </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={rawData.slice(0, 9)} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          <Charts.Interval data={rawData.slice(0, 9)} xAxis='x' yAxis='y' grid={this.getGrid()}  />
         </DeerCard>
       </div>
 
@@ -167,7 +178,7 @@ const App = React.createClass({
             <Meta.Item title="Type">24.6%</Meta.Item>
             <Meta.Item title="Type">24.6%</Meta.Item>
           </Meta>} colorSet={colorSet}>
-          <Charts.Interval data={rawData} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
+          <Charts.Interval data={rawData} xAxis='x' yAxis='y' grid="rgba(0, 0, 0, .1)"  />
         </DeerCard>
       </div>
     </div>
