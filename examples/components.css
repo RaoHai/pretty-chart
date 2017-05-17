@@ -1,6 +1,9 @@
 #__react-content {
   background: #FBFBFB;
 }
+.deer-card-content .meta {
+  margin-top: 24px;
+}
 .deer-card-small,
 .deer-card-very-small,
 .deer-card-mini,
@@ -147,7 +150,6 @@
   font-size: 12px;
   color: #797979;
   padding: 14px 24px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .deer-card-third .deer-card-content {

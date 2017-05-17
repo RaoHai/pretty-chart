@@ -63965,6 +63965,8 @@ var CardBase = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _cls;
+
       var _props = this.props,
           title = _props.title,
           children = _props.children,
@@ -63976,9 +63978,9 @@ var CardBase = function (_Component) {
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: cls('', _defineProperty({
+        { className: cls('', (_cls = {
             dark: theme === 'dark'
-          }, '' + size, true)),
+          }, _defineProperty(_cls, '' + size, true), _defineProperty(_cls, 'hasTitle', !!title), _cls)),
           style: { background: colorSet.background }
         },
         title ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

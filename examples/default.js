@@ -154,7 +154,8 @@ var defaultColorSet = {
     title: '#9B9B9B',
     value: '#417505'
   },
-  guide: '#B3B3B3',
+  guide: 'rgba(0, 0, 0, .1)',
+  grid: 'rgba(255, 255, 255, .5)',
   xAxis: '#B3B3B3',
   yAxis: '#B3B3B3'
 };
@@ -175,7 +176,8 @@ var DarkColorSet = {
     title: 'rgba(255, 255, 255, .6)',
     value: '#FFFFFF'
   },
-  guide: '#FFFFFF',
+  guide: 'rgba(255, 255, 255, .5)',
+  grid: 'rgba(0, 0, 0, .1)',
   xAxis: '#FFFFFF',
   yAxis: '#FFFFFF'
 };
@@ -186,6 +188,14 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
     return {
       dark: true
     };
+  },
+  getGrid: function getGrid() {
+    var dark = this.state.dark;
+
+    if (dark) {
+      return 'rgba(255, 255, 255, .5)';
+    }
+    return 'rgba(0, 0, 0, .1)';
   },
   render: function render() {
     var _this = this;
@@ -238,61 +248,55 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
         { className: 'row' },
         __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_pretty_chart__["a" /* default */],
-          { size: 'third', title: __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-              Meta,
-              null,
-              __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                Meta.Item,
-                { title: 'Average' },
-                '24.6%'
-              )
-            ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          { size: 'third', colorSet: colorSet },
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+            Meta,
+            null,
+            __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+              Meta.Item,
+              { title: 'Average' },
+              '24.6%'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         ),
         __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_pretty_chart__["a" /* default */],
-          { size: 'third', title: __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-              Meta,
-              null,
-              __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                Meta.Item,
-                { title: 'Average' },
-                '24.6%'
-              ),
-              __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                Meta.Item,
-                { title: 'Average' },
-                '103 / DAY'
-              )
-            ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          { size: 'third', colorSet: colorSet },
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+            Meta,
+            null,
+            __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+              Meta.Item,
+              { title: 'Average' },
+              '24.6%'
+            ),
+            __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+              Meta.Item,
+              { title: 'Average' },
+              '103 / DAY'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         ),
         __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_pretty_chart__["a" /* default */],
-          { size: 'third', title: __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-              Meta,
-              null,
+          { size: 'third', colorSet: colorSet },
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+            Meta,
+            null,
+            __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
+              Meta.Item,
+              { type: 'large', title: 'Type something' },
+              '3200 ',
               __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                Meta.Item,
-                { type: 'large', title: 'Type something' },
-                '3200 ',
-                __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                  'span',
-                  { className: 'grow' },
-                  ' 17.18 '
-                )
-              ),
-              __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                Meta.Item,
-                null,
-                __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
-                  'a',
-                  { href: '#' },
-                  ' more something'
-                )
+                'span',
+                { className: 'grow' },
+                ' 17.18 '
               )
-            ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         )
       ),
       __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
@@ -320,7 +324,7 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
                 '24.6%'
               )
             ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         ),
         __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_pretty_chart__["a" /* default */],
@@ -359,7 +363,7 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
                 )
               )
             ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: data, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         )
       ),
       __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
@@ -387,7 +391,7 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
                 '24.6%'
               )
             ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: rawData.slice(0, 9), xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: rawData.slice(0, 9), xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         )
       ),
       __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
@@ -415,7 +419,7 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
                 '24.6%'
               )
             ), colorSet: colorSet },
-          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: rawData, xAxis: 'x', yAxis: 'y', grid: { line: { stroke: '#D9D9D9', lineDash: false, lineWidth: 0.5 } } })
+          __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Charts.Interval, { data: rawData, xAxis: 'x', yAxis: 'y', grid: this.getGrid() })
         )
       )
     );
