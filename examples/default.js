@@ -110,7 +110,6 @@ const App = React.createClass({
       
       <div className="row">
         <DeerCard size="third" title={<Meta>
-            <Meta.Item title="最近一周价格" />
             <Meta.Item title="Average">24.6%</Meta.Item>
           </Meta>} colorSet={colorSet}>
           <Charts.Interval data={data} xAxis='x' yAxis='y' grid={{ line: { stroke: '#D9D9D9' ,lineDash: false, lineWidth: 0.5 }}} />
