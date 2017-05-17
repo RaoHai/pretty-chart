@@ -241,7 +241,6 @@ var App = __WEBPACK_IMPORTED_MODULE_3_react___default.a.createClass({
           { size: 'third', title: __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
               Meta,
               null,
-              __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(Meta.Item, { title: '\u6700\u8FD1\u4E00\u5468\u4EF7\u683C' }),
               __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
                 Meta.Item,
                 { title: 'Average' },

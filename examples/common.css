@@ -331,6 +331,26 @@ h3.deer-card-title {
   position: absolute;
   left: 0;
 }
+.meta .meta-item:only-of-type {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: 50%;
+}
+.meta .meta-item:only-of-type .meta-title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 10px;
+  margin-left: 30px;
+}
 .meta .meta-item.center {
   padding-left: 0 !important;
   text-align: center;
