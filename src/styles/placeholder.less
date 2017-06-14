@@ -1,0 +1,66 @@
+
+.partical-2 .deer-card-placeholder{
+  .deer-card-content .pretty-chart-placeholder {
+    flex: 1;
+    &:not(:only-of-type):not(:first-child) {
+      border: 0;
+      border-left: 1px dashed #979797;
+    }
+  }
+}
+
+.row.vertical .deer-card-placeholder {
+    .deer-card-content .pretty-chart-placeholder {
+      flex-basis: 0;
+      &:not(:only-of-type):not(:first-child) {
+        border: 0;
+        border-left: 1px dashed #979797;
+      }
+    }
+}
+.deer-card-placeholder {
+  border: 1px dashed #979797;
+  border-radius: 0;
+  .deer-card-content {
+    padding: 0;
+    font-size: 36px;
+    color: #D7D7D7;
+    text-align: center;
+    .pretty-chart-placeholder {
+      background: none;
+      height: auto;
+      border: none;
+      color: #D7D7D7;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      flex: 3 0 66%;
+      &:not(:only-of-type):not(:first-child) {
+        border-top: 1px dashed #979797;
+      }
+    }
+
+    .meta {
+      flex: 1 0 33%;
+      margin-top: 0;
+
+      .meta-item:only-of-type {
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 0;
+        .meta-title {
+          margin: 0;
+        }
+      }
+
+      &:first-child {
+        border-bottom: 1px dashed #979797;
+      }
+      &:not(:first-child) {
+        border-top: 1px dashed #979797;
+      }
+    }
+  }
+}

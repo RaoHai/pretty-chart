@@ -1,7 +1,7 @@
-import G2, { Util } from '@ali/g2';
+import G2 from '@ali/g2';
 
-const defaulTheme = (xAxis, yAxis, grid, colorSet) => ({
-  ...G2.Theme, 
+const defaulTheme = xAxis => ({
+  ...G2.Theme,
   plotCfg: {
     margin: [20, 80, 60, 80],
   },
@@ -17,7 +17,7 @@ const defaulTheme = (xAxis, yAxis, grid, colorSet) => ({
   }
 });
 
-const smallTheme = (xAxis, yAxis, grid, colorSet) => ({
+const smallTheme = (xAxis, yAxis) => ({
   ...G2.Theme,
   plotCfg: {
     margin: [0, 10, 22, 10],
@@ -31,7 +31,7 @@ const smallTheme = (xAxis, yAxis, grid, colorSet) => ({
     axes: {
       [`${xAxis}`]: {
         labels: null,
-        line: null, 
+        line: null,
         tickLine: null,
       },
       [`${yAxis}`]: {
@@ -46,7 +46,12 @@ const smallTheme = (xAxis, yAxis, grid, colorSet) => ({
 const mediumTheme = (xAxis, yAxis, grid = false, colorSet, fontSize = 10) => {
   let gridConfig = {};
   if (!grid) {
-    gridConfig.grid = null;
+    gridConfig.grid = {
+      line: {
+        stroke: colorSet.grid,
+        lineDash: [4, 4],
+      }
+    };
   }
   if (typeof grid === 'object') {
     gridConfig.grid = grid;
@@ -60,7 +65,7 @@ const mediumTheme = (xAxis, yAxis, grid = false, colorSet, fontSize = 10) => {
       }
     };
   }
-  console.log('> grid', grid, gridConfig);
+
   return {
     ...G2.Theme,
     plotCfg: {
@@ -95,18 +100,17 @@ const mediumTheme = (xAxis, yAxis, grid = false, colorSet, fontSize = 10) => {
       },
     }
   };
-}
+};
 
 export default {
   ...defaulTheme,
-  large: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74]} }),
-  full: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74]} }),
+  large: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74] } }),
+  full: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74] } }),
   quarter: mediumTheme,
-  third: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74]} }),
-  half: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74]} }),
+  default: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74] } }),
+  third: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74] } }),
+  half: (...args) => ({ ...mediumTheme(...args, 12), height: 230, plotCfg: { margin: [20, 44, 40, 74] } }),
   small: smallTheme,
-  'very-small': (...args) => ({ ...smallTheme(...args), height: 65, plotCfg: { margin: [15, 10, 5, 10]} }),
-  'mini': (...args) => ({ ...smallTheme(...args), height: 50, plotCfg: { margin: [0, 10, 5, 10]} }),
-}
-
-// [ P:2:1, C:3:1, O:3 ]
+  'very-small': (...args) => ({ ...smallTheme(...args), height: 65, plotCfg: { margin: [15, 10, 5, 10] } }),
+  mini: (...args) => ({ ...smallTheme(...args), height: 50, plotCfg: { margin: [0, 10, 5, 10] } }),
+};

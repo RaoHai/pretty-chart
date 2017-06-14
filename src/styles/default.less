@@ -6,20 +6,22 @@
 .deer-card {
 
   &-content {
+    display: flex;
+    flex-direction: column;
     .meta {
-      margin-top: 24px;
+      margin: 24px 12px 0 12px;
     }
   }
 
-  &-small, &-very-small, &-mini, &-quarter, &-third, &-half, &-large, &-full {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  &-small, &-very-small, &-mini, &-quarter, &-third, &-default, &-half, &-large, &-full {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
     border: 0;
     border-radius: 0;
 
     .hover-active-key {
       display: none;
     }
-    .deer-card-title {
+    .deer-card-title, .deer-card-footer {
       color: #9B9B9B;
       font-size: 12px;
       text-align: left;
@@ -130,7 +132,26 @@
     }
   }
 
-  &-third {
+  &-vertical {
+    .chart-wrapper {
+      flex: 1;
+      margin-top: 16px;
+    }
+    .meta {
+      flex: 0 0 120px;
+      flex-direction: column;
+      align-content: flex-start;
+      padding-left: 19px;
+      padding-right: 19px;
+      margin-bottom: 20px;
+
+      .meta-item:not(:nth-of-type(1))::after {
+        display: none;
+      }
+    }
+  }
+
+  &-third, &-default {
     min-height: 300px;
     height: auto;
     border-radius: 4px;
@@ -140,12 +161,12 @@
       padding: 14px 24px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
     }
-    .deer-card-content {
-      padding-bottom: 20px;
-    }
+    // .deer-card-content {
+      // padding-bottom: 20px;
+    // }
     .deer-card-footer {
       background: white;
-      padding: 0;
+      padding: 14px 24px;
       border-top: 1px solid rgba(0, 0, 0, .1);
       border-radius: 0 0 4px 4px;
       .meta {

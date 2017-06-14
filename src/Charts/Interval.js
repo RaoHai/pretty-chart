@@ -1,5 +1,6 @@
 import G2 from '@ali/g2';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import theme from '../Charts/light.theme';
 // G2.Global.setTheme(theme);
 console.log('>> G2', G2.version);
@@ -11,24 +12,25 @@ const defaultIntervalConfig = {
 };
 
 const IntervalConfigs = {
-  small: { size : 10 },
-  'very-small': { size: 7},
-  mini: { size: 6, range: [ 0.1, 0.9 ] },
-  quarter: { size: 14, xAxis: true, yAxis: true},
+  small: { size: 10 },
+  'very-small': { size: 7 },
+  mini: { size: 6, range: [0.1, 0.9] },
+  quarter: { size: 14, xAxis: true, yAxis: true },
   third: { size: 17 },
-  half: { size: 17},
-  large: { size: 17},
-  full: { size: 17, range: [ 0.05, 0.95 ]}
-}
+  default: { size: 17 },
+  half: { size: 17 },
+  large: { size: 17 },
+  full: { size: 17, range: [0.05, 0.95] }
+};
 
 export default class Interval extends Component {
   static contextTypes = {
-    size: React.PropTypes.string,
-    title: React.PropTypes.any,
-    colorSet: React.PropTypes.object,
+    size: PropTypes.string,
+    title: PropTypes.any,
+    colorSet: PropTypes.object,
   }
   constructor() {
-    super();  
+    super();
     this.state = {
       chatId: `interval-chart-${Math.random()}`,
       hoverValues: null,
@@ -49,10 +51,11 @@ export default class Interval extends Component {
       this._chart_inst.destroy();
       this._chart_inst = null;
     }
-    const { data, xAxis, yAxis, grid } = this.props;
-    const { size, colorSet } = this.context;
+    const { data, xAxis, yAxis, grid, size = this.context.size } = this.props;
+    const { colorSet } = this.context;
     const config = { ...defaultIntervalConfig, ...IntervalConfigs[size] };
     const currentTheme = theme[size] || theme;
+    
     const isTinyMode = ['small', 'very-small', 'mini', 'quarter'].indexOf(size) !== -1;
     const tooltipEnable = ['third', 'half'].indexOf(size) !== -1;
     const chart = new G2.Chart({
@@ -124,14 +127,14 @@ export default class Interval extends Component {
     if (!tooltipEnable) {
       chart.tooltip({
         custom: true,
-        html: `<div class="ac-tooltip" style="display: none;"/>`,
+        html: '<div class="ac-tooltip" style="display: none;"/>',
       });
     }
     
     chart.interval()
       .shape('radiusInterval')
       .position(`${xAxis}*${yAxis}`)
-      .color(`${yAxis}`, () => [ colorSet.primary, colorSet.secondary, colorSet.border ])
+      .color(`${yAxis}`, () => [colorSet.primary, colorSet.secondary, colorSet.border])
       .size(config.size || 10);
     chart.render();
     
@@ -150,34 +153,33 @@ export default class Interval extends Component {
       chart.showTooltip(point);
     });
 
-     chart.on('tooltipchange', ev => {
-      var item = ev.items[0];
-      const values = ev.items["0"].point._origin.y;
+    chart.on('tooltipchange', (ev) => {
+      const item = ev.items[0];
+      const values = ev.items[0].point._origin.y;
       item.value = `<ul>
         <li><span class="dot" style="background: ${colorSet.secondary};" ></span>最大值：${values[1]}</li>
         <li><span class="dot" style="background: ${colorSet.primary};"></span>最小值：${values[0]}</li>
-      </ul>`
+      </ul>`;
     });
-
   }
+
   renderHoverValues = () => {
     const { hoverValues } = this.state;
     const { colorSet } = this.context;
-    return ['upper', 'lower'].map((i, idx) => 
-      <span
-        className={`hover-value hover-value-${i}`}
-        key={i}
-        style={{ left: hoverValues.x, top: hoverValues.y[idx], color: colorSet.text.key }}
-      >{hoverValues._origin.y[idx]}</span>
-    )
+    return ['upper', 'lower'].map((i, idx) => (<span
+      className={`hover-value hover-value-${i}`}
+      key={i}
+      style={{ left: hoverValues.x, top: hoverValues.y[idx], color: colorSet.text.key }}
+    >{hoverValues._origin.y[idx]}</span>)
+    );
   }
   render() {
     const { chatId, hoverValues } = this.state;
-    const { xAxis, yAxis } = this.props;
-    const { title, size, colorSet } = this.context;
+    const { xAxis, yAxis, size = this.context.size } = this.props;
+    const { title, colorSet } = this.context;
     const dynamicTitle = size === 'very-small' || size === 'mini';
     return (
-      <div className="interval-wrapper">
+      <div className="chart-wrapper interval-wrapper" ref={ele => this.chartContainer = ele}>
         <div id={chatId} />
         <div className="interval-header">
           {hoverValues ? this.renderHoverValues() : null}
@@ -187,7 +189,7 @@ export default class Interval extends Component {
             <span
               className={`dynamic-title ${!hoverValues ? 'show' : 'hide'}`}
               style={{ background: colorSet.background, color: colorSet.text.value }}
-            >{title}</span> 
+            >{title}</span>
           : null}
         </div>
       </div>

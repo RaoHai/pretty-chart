@@ -2,6 +2,8 @@ import G2 from '@ali/g2';
 const Shape = G2.Shape;
 const Util = G2.Util;
 
+const Global = G2.Global;
+
 function getFillAttrs(cfg) {
   const attrs = Util.mix({
     fill: cfg.color,

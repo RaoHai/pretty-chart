@@ -36,7 +36,7 @@
   "scripts": {
     "build": "rc-tools run build",
     "gh-pages": "rc-tools run gh-pages",
-    "start": "rc-tools run server",
+    "start": "bisheng start -c ./site/bisheng.config.js --no-livereload",
     "pub": "rc-tools run pub",
     "lint": "rc-tools run lint",
     "karma": "rc-tools run karma",
@@ -46,13 +46,31 @@
     "coverage": "rc-tools run coverage"
   },
   "devDependencies": {
+    "antd": "^2.10.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "bisheng": "^0.24.1",
+    "bisheng-plugin-antd": "^0.15.0",
+    "bisheng-plugin-description": "^0.1.1",
+    "bisheng-plugin-react": "^0.5.0",
+    "bisheng-plugin-toc": "^0.4.0",
+    "css-split-webpack-plugin": "^0.2.3",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-markdown": "~1.0.0-beta.4",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-tinker": "^0.4.0",
     "expect.js": "0.3.x",
+    "normalize.css": "^7.0.0",
     "pre-commit": "1.x",
     "rc-checkbox": "^2.0.0",
-    "rc-tools": "^6.1.8",
-    "react": "0.14.x",
-    "react-addons-test-utils": "0.14.x",
-    "react-dom": "0.14.x"
+    "rc-color-picker": "^1.1.5",
+    "react": "^15.5.4",
+    "react-copy-to-clipboard": "^5.0.0",
+    "react-dom": "^15.5.4",
+    "react-intl": "^2.3.0"
   },
   "pre-commit": [
     "lint"
@@ -60,6 +78,8 @@
   "dependencies": {
     "@ali/g2": "^2.3.0",
     "classnames": "^2.2.5",
-    "polished": "^1.1.0"
+    "prop-types": "^15.5.10",
+    "react-dnd": "^2.4.0",
+    "react-dnd-html5-backend": "^2.4.1"
   }
 }

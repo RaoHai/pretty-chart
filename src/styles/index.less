@@ -29,7 +29,6 @@ html, body {
   flex-direction: column;
   margin: 12px 8px;
   flex: 1;
-
   .meta {
     box-shadow: none;
     padding: 0;
@@ -80,7 +79,7 @@ html, body {
     flex: 0 1 50%;
   }
 
-  &-third {
+  &-third, &-default {
     height: 160px;
     flex: 0 1 33%;
   }
@@ -318,7 +317,7 @@ html, body {
         top: 5px;
         bottom: 5px;
         width: 1px;
-        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 1px dashed rgba(255, 255, 255, 0.3);
         border-color: inherit;
         position: absolute;
         left: 0;
@@ -359,7 +358,7 @@ html, body {
 
 .percent-wrapper {
   width: auto;
-  margin-right: 40px;
+  margin: 14px 20px;
   height: 8px;
   display: flex;
   flex-direction: row;
@@ -429,7 +428,7 @@ html, body {
       margin-left: 0;
     }
     .deer-card {
-      &-full, &-large, &-half, &-third, &-quarter {
+      &-default, &-full, &-large, &-half, &-third, &-quarter {
         flex: 0;
       }
 
@@ -451,7 +450,7 @@ html, body {
   width: 100%;
   background: #D8D8D8;
   border: 1px solid #979797;
-  font-size: 48px;
+  font-size: 36px;
   color: #666666;
   text-align: center;
 }
