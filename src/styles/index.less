@@ -65,17 +65,17 @@ html, body {
   }
 
   &-full {
-    height: 310px;
+    min-height: 268px;
     flex: 0 1 100%;
   }
 
   &-large {
-    height: 310px;
+    min-height: 268px;
     flex: 0 1 64%;
   }
 
   &-half {
-    height: 300px;
+    min-height: 268px;
     flex: 0 1 50%;
   }
 
@@ -380,7 +380,7 @@ html, body {
   }
 
   &-large {
-    width: 300px;
+    width: 268px;
     margin-right: auto;
     .percent-value {
       color: #9B9B9B;
@@ -439,6 +439,15 @@ html, body {
   }
 }
 
+.deer-card {
+  &-small, &-quarter {
+    &:not(.deer-card-hasTitle) {
+      .deer-card-content {
+        margin-top: 30px;
+      }
+    }
+  }
+}
 .container {
   width: 100%;
   overflow: hidden;

@@ -1,0 +1,15 @@
+{
+  "name": "pretty-chart-colorsets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "scripts": {
+    "build": "rc-tools run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "",
+  "license": "ISC"
+}

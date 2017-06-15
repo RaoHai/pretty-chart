@@ -133,9 +133,17 @@
   }
 
   &-vertical {
+    .deer-card-content {
+      flex-direction: row;
+    }
     .chart-wrapper {
       flex: 1;
       margin-top: 16px;
+    }
+    &.deer-card {
+      &-large, &-full {
+        .meta { margin-bottom: 25px; }
+      }
     }
     .meta {
       flex: 0 0 120px;
@@ -254,6 +262,8 @@
 
     .deer-card-content {
       flex: 1;
+    }
+    &-hasTitle .deer-card-content {
       padding-top: 60px;
     }
   }

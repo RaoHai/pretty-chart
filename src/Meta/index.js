@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { defaultColorSet } from '../utils/constants';
+import { defaultColorSet } from '../ColorSets';
 
 import './index.less';
 
@@ -33,6 +33,7 @@ export default function Meta({ children, style, vertical, type = 'normal', borde
     meta: true,
     [`meta-${type}`]: true,
     bordered,
+    vertical,
   });
   return <span className={cls} style={{ ...style, color: colorSet.meta.value, borderColor: colorSet.guide }}>{renderMetaItem(children)}</span>;
 }

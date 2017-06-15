@@ -73,11 +73,22 @@ class CardBase extends Component {
     </Dialog>);
   }
 
+  getType = () => {
+    const { type, size } = this.props;
+    if (type) {
+      return type;
+    }
+    if (size === 'large' || size === 'full') {
+      return 'vertical';
+    }
+  }
+
   render() {
-    const { title, children, theme, size, footer, colorSet, type } = this.props;
+    const { title, children, theme, size, footer, colorSet } = this.props;
     const { configureMode } = this.state;
     const contextHeight = this.context.height;
 
+    const type = this.getType();
     return (
       <div className={cls('', {
         dark: theme === 'dark',
